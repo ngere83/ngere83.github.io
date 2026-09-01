@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Posts on 私はとても焦っている</title>
+    <link>http://localhost:1313/posts/</link>
+    <description>Recent content in Posts on 私はとても焦っている</description>
+    <generator>Hugo</generator>
+    <language>ja-jp</language>
+    <lastBuildDate>Mon, 31 Aug 2026 21:11:00 +0900</lastBuildDate>
+    <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>毎日豆腐食ってます</title>
+      <link>http://localhost:1313/posts/a/</link>
+      <pubDate>Mon, 31 Aug 2026 21:11:00 +0900</pubDate>
+      <guid>http://localhost:1313/posts/a/</guid>
+      <description>&lt;p&gt;これが健康の秘訣&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
