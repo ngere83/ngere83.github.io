@@ -2,3 +2,33 @@ baseURL = "https://ngere83.github.io/"
 languageCode = "ja-jp"
 title = "私はとても焦っている"
 theme = "PaperMod"
+
+[[menu.main]]
+name = "Notes"
+url = "/notes/"
+weight = 10
+
+[[menu.main]]
+name = "Tech"
+url = "/tech/"
+weight = 20
+
+[[menu.main]]
+name = "Projects"
+url = "/projects/"
+weight = 30
+
+[[menu.main]]
+name = "Art"
+url = "/art/"
+weight = 40
+
+[[menu.main]]
+name = "Games"
+url = "/games/"
+weight = 50
+
+[[menu.main]]
+name = "About"
+url = "/about/"
+weight = 60
