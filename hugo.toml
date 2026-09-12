@@ -4,6 +4,8 @@ title = "私はとても焦っている"
 theme = "PaperMod"
 
 [params]
+defaultTheme = "light"
+DateFormat = "2006-01-02 15:04"
 mainSections = ["shorts", "notes", "tech", "projects", "art", "games"]
 
 [[menu.main]]

@@ -45,7 +45,7 @@
 {{- $pages = where $pages "Params.hiddenInHomeList" "!=" "true"  }}
 {{- end }}
 
-{{- $paginator := .Paginate $pages.ByDate.Reverse 5 }}
+{{- $paginator := .Paginate $pages.ByDate.Reverse 10 }}
 
 {{- $term := .Data.Term }}
 {{- range $index, $page := $paginator.Pages }}
