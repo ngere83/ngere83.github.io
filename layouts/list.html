@@ -45,12 +45,10 @@
 {{- $pages = where $pages "Params.hiddenInHomeList" "!=" "true"  }}
 {{- end }}
 
-{{- $paginator := .Paginate $pages.ByDate.Reverse 5 }}
+{{- $paginator := .Paginate $pages.ByDate.Reverse }}
 
 {{- if and .IsHome site.Params.homeInfoParams (eq $paginator.PageNumber 1) }}
-<div class="post-content md-content">
-  {{ site.Params.homeInfoParams.Content | .RenderString (dict "display" "block") }}
-</div>
+{{- partial "home_info.html" . }}
 {{- end }}
 
 {{- $term := .Data.Term }}
@@ -92,7 +90,6 @@
   {{- end }}
   {{- if not (.Param "hideMeta") }}
   <footer class="entry-footer">
-    {{- with .CurrentSection }}{{ .Title }}&nbsp;·&nbsp;{{ end -}}
     {{- partial "post_meta.html" . -}}
   </footer>
   {{- end }}

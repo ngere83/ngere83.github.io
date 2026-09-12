@@ -2,4 +2,4 @@
 title = 'About'
 +++
 
-このサイトは個人の記録、技術、制作物などを置く場所です。
+![About](/images/about.png)

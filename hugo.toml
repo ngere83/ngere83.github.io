@@ -4,10 +4,15 @@ title = "私はとても焦っている"
 theme = "PaperMod"
 
 [params]
-mainSections = ["notes", "tech", "projects", "art", "games"]
+mainSections = ["shorts", "notes", "tech", "projects", "art", "games"]
 
 [params.homeInfoParams]
-Content = "個人の記録、技術、制作物などを置いています。"
+Content = "いろいろありますね"
+
+[[menu.main]]
+name = "一言"
+url = "/shorts/"
+weight = 5
 
 [[menu.main]]
 name = "Notes"

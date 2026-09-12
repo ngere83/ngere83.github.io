@@ -1,0 +1,10 @@
+.short-entry {
+    margin-bottom: var(--gap);
+    padding: calc(var(--gap) / 2) var(--gap);
+}
+
+.short-entry p {
+    margin: 0 0 4px;
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+}
