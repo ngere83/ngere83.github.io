@@ -1,0 +1,36 @@
+.mobile-menu-toggle { display: none; }
+.mobile-drawer {
+    position: fixed;
+    inset: 0 0 0 auto;
+    margin: 0;
+    width: min(320px, 88vw);
+    max-width: 100vw;
+    height: 100dvh;
+    max-height: 100dvh;
+    padding: 20px;
+    border: 0;
+    color: var(--primary);
+    background: var(--theme);
+    overflow-y: auto;
+    overscroll-behavior: contain;
+}
+.mobile-drawer[open] { animation: drawer-in 180ms ease-out; }
+.mobile-drawer::backdrop { background: rgb(0 0 0 / 45%); }
+.mobile-drawer nav { display: grid; }
+.mobile-drawer a, #mobile-theme-toggle { display: block; padding: 12px 0; }
+.mobile-drawer [aria-current="page"] { text-decoration: underline; }
+.mobile-menu-close { display: block; margin-left: auto; font-size: 28px; width: 44px; height: 44px; }
+.mobile-drawer :focus-visible, .mobile-menu-toggle:focus-visible { outline: 2px solid currentColor; outline-offset: 2px; }
+@keyframes drawer-in { from { transform: translateX(100%); } to { transform: translateX(0); } }
+/* Same mobile breakpoint as PaperMod's core/zmedia.css. */
+@media screen and (max-width: 768px) {
+    .mobile-nav-ready .header-nav { flex-wrap: nowrap; column-gap: 8px; }
+    .mobile-nav-ready .header-nav > .menu,
+    .mobile-nav-ready .logo-switches { display: none; }
+    .mobile-nav-ready .header-nav .logo { min-width: 0; }
+    .mobile-nav-ready .site-title { font-size: clamp(16px, 4.5vw, 24px); line-height: 1.4; overflow-wrap: anywhere; }
+    .mobile-nav-ready .mobile-menu-toggle { display: block; flex-shrink: 0; font-size: 26px; width: 44px; height: 44px; align-self: center; }
+}
+@media (prefers-reduced-motion: reduce) {
+    .mobile-drawer[open] { animation: none; }
+}

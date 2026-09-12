@@ -53,3 +53,7 @@ favicon = "/images/もちアイコン.png"
 favicon16x16 = "/images/もちアイコン.png"
 favicon32x32 = "/images/もちアイコン.png"
 apple_touch_icon = "/images/もちアイコン.png"
+
+[services]
+  [services.googleAnalytics]
+    id = "G-T2MYDJ6PLG"
