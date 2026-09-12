@@ -1,13 +1,13 @@
 +++
-title = "もちテスト"
+title = "もち"
 date = '2026-09-12T08:48:40.0321216+09:00'
 draft = false
 entryType = "image"
 
 [cover]
 image = "image.png"
-alt = "もちテスト"
+alt = "もち"
 hiddenInSingle = true
 +++
 
-![もちテスト](image.png)
+![もち](image.png)

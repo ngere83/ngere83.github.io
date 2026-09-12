@@ -11,6 +11,9 @@ param(
     [AllowEmptyString()]
     [string]$Body = '',
 
+    [ValidateNotNullOrEmpty()]
+    [string]$Date,
+
     [switch]$Open
 )
 
@@ -23,7 +26,9 @@ try {
         throw "投稿先がありません: $directory"
     }
 
-    $now = [DateTimeOffset]::Now
+    $now = if ($PSBoundParameters.ContainsKey('Date')) {
+        & "$PSScriptRoot/resolve-post-date.ps1" -Date $Date
+    } else { [DateTimeOffset]::Now }
     $path = Join-Path $directory ($now.ToString('yyyyMMdd-HHmmss') + '.md')
     $escapedTitle = ConvertTo-Json -InputObject $Title -Compress
     $markdown = "+++`ntitle = $escapedTitle`ndate = '$($now.ToString('o'))'`ndraft = false`nentryType = `"article`"`n+++`n"

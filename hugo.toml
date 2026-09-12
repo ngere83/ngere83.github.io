@@ -6,11 +6,13 @@ theme = "PaperMod"
 [params]
 mainSections = ["shorts", "notes", "tech", "projects", "art", "games"]
 
-[params.homeInfoParams]
-Content = "いろいろありますね"
+[[menu.main]]
+name = "HOME"
+url = "/"
+weight = 1
 
 [[menu.main]]
-name = "一言"
+name = "Post"
 url = "/shorts/"
 weight = 5
 
@@ -43,3 +45,9 @@ weight = 50
 name = "About"
 url = "/about/"
 weight = 60
+
+[params.assets]
+favicon = "/images/もちアイコン.png"
+favicon16x16 = "/images/もちアイコン.png"
+favicon32x32 = "/images/もちアイコン.png"
+apple_touch_icon = "/images/もちアイコン.png"

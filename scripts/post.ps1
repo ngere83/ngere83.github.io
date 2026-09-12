@@ -5,6 +5,9 @@ param(
     [ValidateNotNullOrEmpty()]
     [string]$Title,
 
+    [ValidateNotNullOrEmpty()]
+    [string]$Date,
+
     [switch]$Open
 )
 
@@ -17,7 +20,9 @@ try {
         throw "投稿先がありません: $directory"
     }
 
-    $now = [DateTimeOffset]::Now
+    $now = if ($PSBoundParameters.ContainsKey('Date')) {
+        & "$PSScriptRoot/resolve-post-date.ps1" -Date $Date
+    } else { [DateTimeOffset]::Now }
     $path = Join-Path $directory ($now.ToString('yyyyMMdd-HHmmss') + '.md')
     # JSONの文字列エスケープはTOMLの基本文字列でも使用できる。
     $escapedTitle = ConvertTo-Json -InputObject $Title -Compress

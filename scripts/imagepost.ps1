@@ -13,6 +13,9 @@ param(
     [string]$Section = 'art',
 
     [string]$Caption = '',
+    [ValidateNotNullOrEmpty()]
+    [string]$Date,
+
     [switch]$Open
 )
 
@@ -29,7 +32,9 @@ try {
     $directory = Join-Path $root "content/$($Section.ToLowerInvariant())"
     if (-not (Test-Path -LiteralPath $directory -PathType Container)) { throw "投稿先がありません: $directory" }
 
-    $now = [DateTimeOffset]::Now
+    $now = if ($PSBoundParameters.ContainsKey('Date')) {
+        & "$PSScriptRoot/resolve-post-date.ps1" -Date $Date
+    } else { [DateTimeOffset]::Now }
     $bundle = Join-Path $directory ($now.ToString('yyyyMMdd-HHmmss'))
     # 元の名前に依存しない安全なコピー名。元画像の内容・名前は変更しない。
     $imageName = 'image' + $extension
