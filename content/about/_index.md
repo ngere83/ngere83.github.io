@@ -2,4 +2,4 @@
 title = 'About'
 +++
 
-![About](/images/about_skel.png)
+![About](/images/about2.png)
