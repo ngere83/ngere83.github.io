@@ -9,7 +9,7 @@ param(
     [ValidateNotNullOrEmpty()]
     [string]$File,
 
-    [ValidateSet('art', 'notes', 'tech', 'projects', 'games')]
+    [ValidateSet('art', 'notes', 'tech', 'food', 'games')]
     [string]$Section = 'art',
 
     [string]$Caption = '',

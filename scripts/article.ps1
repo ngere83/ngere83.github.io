@@ -5,7 +5,7 @@ param(
     [ValidateNotNullOrEmpty()]
     [string]$Title,
 
-    [ValidateSet('notes', 'tech', 'projects', 'art', 'games')]
+    [ValidateSet('notes', 'tech', 'food', 'art', 'games')]
     [string]$Section = 'notes',
 
     [AllowEmptyString()]

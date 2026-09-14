@@ -13,7 +13,7 @@
   {{- end -}}
 {{- end -}}
 {{- $attributes := merge .Attributes (dict "alt" .Text "src" $src "title" (.Title | transform.HTMLEscape) "loading" "lazy") -}}
-{{- if and .Page.IsPage (in (slice "notes" "tech" "projects" "games" "art") .Page.Section) -}}
+{{- if and .Page.IsPage (in (slice "notes" "tech" "food" "games" "art") .Page.Section) -}}
   {{- $attributes = merge $attributes (dict "class" (printf "%s article-image section-%s" ($attributes.class | default "") .Page.Section)) -}}
 {{- end -}}
 <img

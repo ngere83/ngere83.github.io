@@ -6,7 +6,7 @@ theme = "PaperMod"
 [params]
 defaultTheme = "light"
 DateFormat = "2006-01-02 15:04"
-mainSections = ["shorts", "notes", "tech", "projects", "art", "games"]
+mainSections = ["shorts", "notes", "tech", "food", "art", "games"]
 
 [[menu.main]]
 name = "HOME"
@@ -29,8 +29,8 @@ url = "/tech/"
 weight = 20
 
 [[menu.main]]
-name = "Projects"
-url = "/projects/"
+name = "Food"
+url = "/food/"
 weight = 30
 
 [[menu.main]]
@@ -49,10 +49,10 @@ url = "/about/"
 weight = 60
 
 [params.assets]
-favicon = "/images/もちアイコン.png"
-favicon16x16 = "/images/もちアイコン.png"
-favicon32x32 = "/images/もちアイコン.png"
-apple_touch_icon = "/images/もちアイコン.png"
+favicon = "/images/とりアイコン.png"
+favicon16x16 = "/images/とりアイコン.png"
+favicon32x32 = "/images/とりアイコン.png"
+apple_touch_icon = "/images/とりアイコン.png"
 
 [services]
   [services.googleAnalytics]

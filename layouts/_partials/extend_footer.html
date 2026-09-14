@@ -1,6 +1,6 @@
 {{- $script := resources.Get "js/mobile-menu.js" | minify | fingerprint }}
 <script src="{{ $script.RelPermalink }}" integrity="{{ $script.Data.Integrity }}" defer></script>
-{{- if and .IsPage (in (slice "notes" "tech" "projects" "games" "art") .Section) }}
+{{- if and .IsPage (in (slice "notes" "tech" "food" "games" "art") .Section) }}
 <dialog id="image-lightbox" class="image-lightbox" aria-label="画像の拡大表示" aria-modal="true">
     <button type="button" aria-label="画像を閉じる" autofocus>×</button>
     <img alt="">
