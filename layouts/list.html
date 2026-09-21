@@ -70,6 +70,9 @@
 <article class="{{ $class }}{{ if eq .Params.entryType "image" }} image-entry{{ end }}">
   {{- $isHidden := (.Param "cover.hiddenInList") | default (.Param "cover.hidden") | default false }}
   {{- partial "cover.html" (dict "cxt" . "IsSingle" false "isHidden" $isHidden) }}
+  {{- if and (ne .Params.entryType "image") (not (.Param "cover.image")) }}
+    {{- partial "article_list_image.html" . }}
+  {{- end }}
   <header class="entry-header">
     <h2 class="entry-hint-parent">
       {{- .Title }}

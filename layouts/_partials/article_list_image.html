@@ -1,0 +1,6 @@
+{{- $images := findRE `<img\b[^>]*>` .Content 1 -}}
+{{- with $images }}
+<figure class="entry-cover article-preview">
+  {{ index . 0 | safeHTML }}
+</figure>
+{{- end }}
