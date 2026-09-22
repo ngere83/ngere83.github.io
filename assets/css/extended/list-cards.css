@@ -15,3 +15,9 @@
     object-fit: cover;
     object-position: top;
 }
+
+.list .entry-preview {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

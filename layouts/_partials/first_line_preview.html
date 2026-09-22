@@ -1,0 +1,11 @@
+{{- $withoutImages := replaceRE `(?is)<img\b[^>]*>` "" .Content -}}
+{{- $plain := $withoutImages | plainify | htmlUnescape -}}
+{{- $plain = replaceRE "\r\n?" "\n" $plain -}}
+{{- $scratch := newScratch -}}
+{{- range split $plain "\n" -}}
+  {{- $line := strings.TrimSpace . -}}
+  {{- if and $line (not ($scratch.Get "line")) -}}
+    {{- $scratch.Set "line" $line -}}
+  {{- end -}}
+{{- end -}}
+{{- with ($scratch.Get "line") }}{{ . }}{{ end -}}

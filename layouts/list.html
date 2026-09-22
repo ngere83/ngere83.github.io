@@ -88,7 +88,7 @@
   </header>
   {{- if (ne (.Param "hideSummary") true) }}
   <div class="entry-content">
-    <p>{{ .Summary | plainify | htmlUnescape }}{{ if .Truncated }}...{{ end }}</p>
+    <p class="entry-preview">{{ partial "first_line_preview.html" . }}</p>
   </div>
   {{- end }}
   {{- if not (.Param "hideMeta") }}
