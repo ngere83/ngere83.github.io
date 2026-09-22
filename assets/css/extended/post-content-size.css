@@ -1,0 +1,5 @@
+/* Individual article prose only. Headings, code, tables and media keep their theme rules. */
+.post-single .post-content {
+    font-size: 16px;
+    line-height: 1.8;
+}
